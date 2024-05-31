@@ -14,7 +14,7 @@ List Food
 
 Search
 
-1. Add method to Food service
-2. Add search route
+1. Add method to Food service +
+2. Add search route +
 3. Show search result in Home component
 4. Generate search component (add to home component, ts. html, css)
