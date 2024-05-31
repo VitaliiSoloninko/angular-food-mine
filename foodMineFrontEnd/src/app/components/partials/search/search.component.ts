@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -6,20 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './search.component.css',
 })
 export class SearchComponent implements OnInit {
-  search(arg0: string) {
-    throw new Error('Method not implemented.');
+  searchTerm = '';
+  constructor(activatedRouter: ActivatedRoute, private router: Router) {
+    activatedRouter.params.subscribe((params) => {
+      if (params.searchTerm) this.searchTerm = params.searchTerm;
+    });
   }
-  // searchTerm = '';
-
-  // constructor(activatedRoute: ActivatedRoute, private router: Router) {
-  //   activatedRoute.params.subscribe((params) => {
-  //     if (params.searchTerm) this.searchTerm = params.searchTerm;
-  //   });
-  // }
 
   ngOnInit(): void {}
 
-  // search(term: string): void {
-  //    if (term) this.router.navigateByUrl('/search/' + term);
-  // }
+  search(term: string): void {
+    if (term) this.router.navigateByUrl('/search/' + term);
+  }
 }
