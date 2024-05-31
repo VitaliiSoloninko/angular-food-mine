@@ -69,7 +69,7 @@ li a img {
 	color: gray;
 	margin-right: 0.3rem;
 	margin-top: 0.2rem;
-	padding: 0.1rem 0.8rem 0.2rem 0.8rem;
+	padding: 0.1rem 0.5rem 0.2rem 0.5rem;
 }
 
 .cook-time {
@@ -77,6 +77,11 @@ li a img {
 	flex: 3;
 	text-align: right;
 	margin-top: 0.2rem;
+}
+
+.stars {
+	margin-top: 0.2rem;
+	padding: 0.4rem 0;
 }
 
 .price {
