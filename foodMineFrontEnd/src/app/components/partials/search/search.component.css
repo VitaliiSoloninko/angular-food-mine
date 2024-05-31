@@ -15,8 +15,8 @@ input {
 	font-size: 1.1rem;
 	font-weight: 500;
 	outline: none;
-	transition: background-color 0.3s ease 0s;
-	opacity: 0.9;
+	transition: all 0.3s ease 0s;
+	opacity: 0.8;
 }
 input:hover {
 	opacity: 1;
@@ -30,7 +30,7 @@ div button {
 	border: none;
 	background-color: #ff4d4d;
 	color: white;
-	opacity: 0.9;
+	opacity: 0.8;
 	outline: none;
 	transition: all 0.3s ease 0s;
 	padding: 0.5rem 1rem;
