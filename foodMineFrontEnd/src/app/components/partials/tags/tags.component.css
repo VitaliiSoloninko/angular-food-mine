@@ -1,0 +1,23 @@
+div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+div a {
+	background-color: #f0f0f0;
+	color: #444;
+	padding: 0.3rem 1rem;
+	gap: 1rem;
+	margin: 0.2rem 0.2rem;
+	border-radius: 10rem;
+	font-weight: 500;
+	transition: all 0.3s ease 0s;
+}
+
+div a:hover {
+	background-color: #dcdbdb;
+	scale: 1.03;
+	color: #111;
+}
