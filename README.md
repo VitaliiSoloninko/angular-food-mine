@@ -37,3 +37,12 @@ Tags Bar
    6.2 Add ts
    6.3 Add html
    6.4 Add css
+
+Food Page
+
+1. Add method to food service
+2. Generate Food Page component
+   2.1 Add Route
+   2.2 Add ts
+   2.3 Add html
+   2.4 Add css
