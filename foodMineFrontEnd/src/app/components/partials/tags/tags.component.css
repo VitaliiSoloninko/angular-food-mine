@@ -20,4 +20,5 @@ div a:hover {
 	background-color: #dcdbdb;
 	scale: 1.03;
 	color: #111;
+	cursor: pointer;
 }

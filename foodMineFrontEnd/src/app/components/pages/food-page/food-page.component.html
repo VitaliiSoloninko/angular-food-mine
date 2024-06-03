@@ -11,9 +11,7 @@
       <span *ngFor="let origin of food.origins">{{ origin }}</span>
     </div>
     <div class="tags">
-      <span *ngFor="let tag of food.tags" routerLink="/tag/{{ tag }}">{{
-        tag
-      }}</span>
+      <a *ngFor="let tag of food.tags" routerLink="/tag/{{ tag }}">{{ tag }}</a>
     </div>
     <div class="cook-time">
       <span
@@ -21,7 +19,7 @@
       >
     </div>
     <div class="price">
-      <span>Price {{ food.price | currency }}</span>
+      <span> {{ food.price | currency }}</span>
     </div>
     <button>Add to Cart</button>
   </div>
