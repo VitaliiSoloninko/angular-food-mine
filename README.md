@@ -3,6 +3,7 @@
    1.2 Add HTML
    1.3 Add CSS
 2. List Food +
+
    2.1 Create Food model
    2.2 Create data.ts (add sample foods)
    2.3 Add images to assets
@@ -11,10 +12,10 @@
 
 Search +
 
-1. Add method to Food service +
-2. Add search route +
-3. Show search result in Home component +
-4. Generate search component
+3. Add method to Food service +
+4. Add search route +
+5. Show search result in Home component +
+6. Generate search component
    4.1 add to home component
    4.2 Add ts
    4.3 Add html
