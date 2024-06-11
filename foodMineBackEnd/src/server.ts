@@ -1,11 +1,12 @@
 import cors from 'cors'
 import express from 'express'
-import { sample_foods, sample_tags } from './data'
+import { sample_foods, sample_tags, sample_users } from './data'
 // cors for redirect localhost server
 // localhost: 4200 - Angular
 // localhost: 5000 - Express
 
 const app = express()
+app.use(express.json())
 app.use(
 	cors({
 		credentials: true,
@@ -39,6 +40,17 @@ app.get('/api/foods/:foodId', (req, res) => {
 	const foodId = req.params.foodId
 	const food = sample_foods.find(food => food.id == foodId)
 	res.send(food)
+})
+
+app.post('/api/users/login', (req, res) => {
+	const { email, password } = req.body // Destructuring Assignment
+	const user = sample_users.find(
+		user => user.email === email && user.password === password
+	)
+
+	if (user) {
+		res.send()
+	}
 })
 
 const port = 5000
