@@ -59,6 +59,19 @@ FRONT END
    7.5.2 Food Page
    7.5.3 Cart Page
 
+8. Login Page
+   9.1 Generate component
+   9.1.2 Add to routers
+   9.1.3 Add ts
+   9.1.4 Add html
+   9.1.5 Import Reactive Forms Module
+   9.1.6 Add css
+   9.2 Add Login api
+   9.2.1 Use json
+   9.2.2 Add jsonwebtoken
+   9.2.3 Test Using Postman
+   9.3 Part 2
+
 BACK END
 
 8. Create and connecting to Backend
