@@ -7,6 +7,7 @@ import {
   FOODS_BY_ID_URL,
   FOODS_BY_SEARCH_URL,
   FOODS_BY_TAG_URL,
+  FOODS_TAGS_URL,
   FOODS_URL,
 } from '../shared/models/constants/urls';
 
@@ -26,7 +27,7 @@ export class FoodService {
   }
 
   getAllTags(): Observable<Tag[]> {
-    return this.http.get<Tag[]>(FOODS_BY_TAG_URL);
+    return this.http.get<Tag[]>(FOODS_TAGS_URL);
   }
 
   getAllFoodsByTag(tag: string): Observable<Food[]> {
