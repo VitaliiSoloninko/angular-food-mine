@@ -61,5 +61,18 @@ FRONT END
 
 BACK END
 
-8. Connect To Backend
+8. Create and connecting to Backend
    8.1 Create backend folder
+   8.2 npm init
+   8.3 npm install typescript
+   8.4 Create tsconfig.json
+   8.5 Create .gitignore
+   8.6 Copy data.ts to backend/src
+   8.7 npm install express cors
+   8.8 Create server.ts
+   8.8.1 install @types
+   8.8.2 Add Api
+   8.9 npm install nodemon ts-node --save-dev
+   8.10 Add urs.ts to frontend
+   8.11 Add HttpClient module
+   8.12 Update food service
