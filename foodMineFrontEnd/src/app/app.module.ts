@@ -15,6 +15,7 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
 import { SearchComponent } from './components/partials/search/search.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
 import { TitleComponent } from './components/partials/title/title.component';
+import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TitleComponent } from './components/partials/title/title.component';
     CartPageComponent,
     TitleComponent,
     NotFoundComponent,
+    LoginPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [provideClientHydration()],
