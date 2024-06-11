@@ -1,8 +1,7 @@
 import cors from 'cors'
 import express from 'express'
+import jwt from 'jsonwebtoken'
 import { sample_foods, sample_tags, sample_users } from './data'
-
-
 
 // cors for redirect localhost server
 // localhost: 4200 - Angular
@@ -52,12 +51,26 @@ app.post('/api/users/login', (req, res) => {
 	)
 
 	if (user) {
-		res.send()
+		res.send(generateTokenResponse(user))
+	} else {
+		res.status(400).send('User or password is not valid!')
 	}
 })
 
-const generateTokenResponse = (user:any){
+const generateTokenResponse = (user: any) => {
+	const token = jwt.sign(
+		{
+			email: user.email,
+			isAdmin: user.isAdmin,
+		},
+		'SomeRandomText',
+		{
+			expiresIn: '30d',
+		}
+	)
 
+	user.token = token
+	return user
 }
 
 const port = 5000
