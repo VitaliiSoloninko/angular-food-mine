@@ -1,6 +1,9 @@
 import cors from 'cors'
 import express from 'express'
 import { sample_foods, sample_tags, sample_users } from './data'
+
+
+
 // cors for redirect localhost server
 // localhost: 4200 - Angular
 // localhost: 5000 - Express
@@ -52,6 +55,10 @@ app.post('/api/users/login', (req, res) => {
 		res.send()
 	}
 })
+
+const generateTokenResponse = (user:any){
+
+}
 
 const port = 5000
 app.listen(port, () => {
