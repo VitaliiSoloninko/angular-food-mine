@@ -1,7 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { User } from '../shared/models/User';
+import { USER_LOGIN_URL } from '../shared/models/constants/urls';
 
 @Injectable({
   providedIn: 'root',
@@ -9,13 +12,24 @@ import { User } from '../shared/models/User';
 export class UserService {
   private userSubject = new BehaviorSubject<User>(new User());
   public userObservable: Observable<User>;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private toastrService: ToastrService) {
     this.userObservable = this.userSubject.asObservable();
   }
 
-  // login(userLogin: IUserLogin): Observable<User> {
-  //   return this.http
-  //     .post<User>(USER_LOGIN_URL, userLogin)
-  //     .pipe(tap({ next: (user) => {} }, error: (errorResponse)=>{}));
-  // }
+  login(userLogin: IUserLogin): Observable<User> {
+    return this.http.post<User>(USER_LOGIN_URL, userLogin).pipe(
+      tap({
+        next: (user) => {
+          this.userSubject.next(user);
+          this.toastrService.success(
+            `Welcome to Foodmine ${user.name}!`,
+            'Login Successful'
+          );
+        },
+        error: (errorResponse) => {
+          this.toastrService.error(errorResponse.error, 'Login Failed');
+        },
+      })
+    );
+  }
 }

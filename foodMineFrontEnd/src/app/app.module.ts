@@ -39,7 +39,11 @@ import { TitleComponent } from './components/partials/title/title.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ToastrModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right',
+      newestOnTop: false,
+    }),
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
