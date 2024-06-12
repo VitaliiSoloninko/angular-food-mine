@@ -59,7 +59,7 @@ FRONT END
    7.5.2 Food Page
    7.5.3 Cart Page
 
-8. Login Page
+8. Login Page 1
    9.1 Generate component
    9.1.2 Add to routers
    9.1.3 Add ts
@@ -70,7 +70,18 @@ FRONT END
    9.2.1 Use json
    9.2.2 Add jsonwebtoken
    9.2.3 Test Using Postman
-   9.3 Part 2
+
+9. Login Page 2 Generate User Service
+   1. Generate User model
+   2. Add User Subject
+   3. Add login Method
+      1. Add User Urls
+      2. Generate IUserLogin interface 3. Add ngx-toastr
+         1. Import Module 2. Import BrowserAnimationModule 3. Add styles in angular.json
+         2. Add to Header
+      3. Add Local Storage method
+      4. Add logout Method
+         1. Add to Header
 
 BACK END
 
