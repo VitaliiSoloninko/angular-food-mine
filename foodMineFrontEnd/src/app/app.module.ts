@@ -6,6 +6,8 @@ import {
 } from '@angular/platform-browser';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
@@ -33,9 +35,11 @@ import { TitleComponent } from './components/partials/title/title.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    ToastrModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
