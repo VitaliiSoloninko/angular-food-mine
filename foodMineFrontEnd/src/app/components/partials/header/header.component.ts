@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../../shared/models/User';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent implements OnInit {
+  // constructor(cartService: CartService, private userService: UserService) {}
   // ============ Cart Quantity in Header not work
   // cartQuantity = 0;
   // constructor(cartService: CartService) {
@@ -13,5 +15,16 @@ export class HeaderComponent implements OnInit {
   //     this.cartQuantity = newCart.totalCount;
   //   });
   // }
+
+  user!: User;
+  // constructor(userService: UserService) {
+  //   userService.userObservable.subscribe((newUser) => {
+  //     this.user = newUser;
+  //   });
+  // }
   ngOnInit(): void {}
+
+  // logout() {
+  //   this.userService.logout();
+  // }
 }
