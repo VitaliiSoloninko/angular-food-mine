@@ -3,7 +3,7 @@
     <a routerLink="/" class="logo">Food Mine</a>
     <nav>
       <ul>
-        <li *ngIf="!user.token">
+        <li>
           <a routerLink="/login">Login</a>
         </li>
         <li class="menu-container">
@@ -16,8 +16,7 @@
         </li>
         <li>
           <a routerLink="/cart-page"
-            >Cart
-            <!--<span *ngIf="cartQuantity">{{ cartQuantity }}</span>--></a
+            >Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a
           >
         </li>
       </ul>
