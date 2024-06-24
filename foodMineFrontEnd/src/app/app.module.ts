@@ -1,9 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import {
-  BrowserModule,
-  provideClientHydration,
-} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -40,12 +37,12 @@ import { TitleComponent } from './components/partials/title/title.component';
     HttpClientModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
-      timeOut: 3000,
+      timeOut: 4000,
       positionClass: 'toast-bottom-right',
       newestOnTop: false,
     }),
   ],
-  providers: [provideClientHydration()],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

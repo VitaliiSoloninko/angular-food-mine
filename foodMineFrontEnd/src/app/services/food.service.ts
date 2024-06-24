@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Food } from '../shared/models/Food';
-import { Tag } from '../shared/models/Tag';
 import {
   FOODS_BY_ID_URL,
   FOODS_BY_SEARCH_URL,
   FOODS_BY_TAG_URL,
   FOODS_TAGS_URL,
   FOODS_URL,
-} from '../shared/models/constants/urls';
+} from '../shared/constants/urls';
+import { Food } from '../shared/models/Food';
+import { Tag } from '../shared/models/Tag';
 
 @Injectable({
   providedIn: 'root',

@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { USER_LOGIN_URL } from '../shared/constants/urls';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { User } from '../shared/models/User';
-import { USER_LOGIN_URL } from '../shared/models/constants/urls';
 
 const USER_KEY = 'User';
 @Injectable({
@@ -41,6 +41,7 @@ export class UserService {
     this.userSubject.next(new User());
     localStorage.removeItem(USER_KEY);
     window.location.reload();
+    // window.location.reload(); // refresh page
   }
 
   private setUserToLocalStorage(user: User) {
