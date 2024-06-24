@@ -58,7 +58,6 @@ FRONT END
    7.5.1 Home Page
    7.5.2 Food Page
    7.5.3 Cart Page
-
 8. Login Page 1
    9.1 Generate component
    9.1.2 Add to routers
@@ -70,7 +69,6 @@ FRONT END
    9.2.1 Use json
    9.2.2 Add jsonwebtoken
    9.2.3 Test Using Postman
-
 9. Login Page 2 Generate User Service
    1. Generate User model
    2. Add User Subject
@@ -82,6 +80,11 @@ FRONT END
       3. Add Local Storage method
       4. Add logout Method
          1. Add to Header
+10. Make Components for Login page
+    1. Input Container
+    2. Input Validation
+    3. Text Input
+    4. Default Button
 
 BACK END
 
