@@ -17,6 +17,7 @@ import { SearchComponent } from './components/partials/search/search.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
 import { TitleComponent } from './components/partials/title/title.component';
 import { InputContainerComponent } from './components/partials/input-container/input-container.component';
+import { InputValidationComponent } from './components/partials/input-validation/input-validation.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { InputContainerComponent } from './components/partials/input-container/i
     NotFoundComponent,
     LoginPageComponent,
     InputContainerComponent,
+    InputValidationComponent,
   ],
   imports: [
     BrowserModule,
