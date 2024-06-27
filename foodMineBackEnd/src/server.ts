@@ -1,11 +1,12 @@
 import dotenv from 'dotenv'
 dotenv.config()
-process.env.MONGO_URI
 
 import cors from 'cors'
 import express from 'express'
 import foodRouter from './routers/food.router'
 import userRouter from './routers/user.router'
+import { dbConnect } from './configs/database.config'
+dbConnect()
 
 // cors for redirect localhost server
 // localhost: 4200 - Angular
