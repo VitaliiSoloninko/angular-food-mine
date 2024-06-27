@@ -1,3 +1,7 @@
+import dotenv from 'dotenv'
+dotenv.config()
+process.env.MONGO_URI
+
 import cors from 'cors'
 import express from 'express'
 import foodRouter from './routers/food.router'
