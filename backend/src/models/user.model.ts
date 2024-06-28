@@ -28,4 +28,4 @@ export const UserSchema = new Schema<User>(
 	}
 )
 
-export const FoodModel = model<User>('user', UserSchema)
+export const UserModel = model<User>('user', UserSchema)

@@ -5,16 +5,17 @@ import { FoodModel } from '../models/food.model'
 
 const router = Router()
 
+// connect with MongoDB
 router.get(
 	'/seed',
 	expressAsyncHandler(async (req, res) => {
 		const foodsCount = await FoodModel.countDocuments()
 		if (foodsCount > 0) {
-			res.send('Seed is already done!')
+			res.send('Seed is update')
 			return
 		}
 		await FoodModel.create(sample_foods)
-		res.send('Seed Is Done!')
+		res.send('Seed is done!')
 	})
 )
 
