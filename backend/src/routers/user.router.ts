@@ -1,7 +1,7 @@
 import Router from 'express'
+import expressAsyncHandler from 'express-async-handler'
 import jwt from 'jsonwebtoken'
 import { sample_users } from '../data'
-import expressAsyncHandler from 'express-async-handler'
 import { UserModel } from '../models/user.model'
 
 const router = Router()
@@ -19,18 +19,19 @@ router.get(
 	})
 )
 
-router.post('/login', (req, res) => {
-	const { email, password } = req.body // Destructuring Assignment
-	const user = sample_users.find(
-		user => user.email === email && user.password === password
-	)
+router.post(
+	'/login',
+	expressAsyncHandler(async (req, res) => {
+		const { email, password } = req.body // Destructuring Assignment
+		const user = await UserModel.findOne({ email, password })
 
-	if (user) {
-		res.send(generateTokenResponse(user))
-	} else {
-		res.status(400).send('User name or password is not valid!')
-	}
-})
+		if (user) {
+			res.send(generateTokenResponse(user))
+		} else {
+			res.status(400).send('User name or password is not valid!')
+		}
+	})
+)
 
 const generateTokenResponse = (user: any) => {
 	const token = jwt.sign(
