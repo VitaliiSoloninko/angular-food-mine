@@ -11,13 +11,21 @@ router.get(
 	expressAsyncHandler(async (req, res) => {
 		const foodsCount = await FoodModel.countDocuments()
 		if (foodsCount > 0) {
-			res.send('Seed is update')
+			res.send('Seed food is update')
 			return
 		}
 		await FoodModel.create(sample_foods)
-		res.send('Seed is done!')
+		res.send('Seed food is done!')
 	})
 )
+
+// router.get(
+// 	'/',
+// 	expressAsyncHandler(async (req, res) => {
+// 		const foods = await FoodModel.find()
+// 		res.send(foods)
+// 	})
+// )
 
 router.get('/', (req, res) => {
 	res.send(sample_foods)
