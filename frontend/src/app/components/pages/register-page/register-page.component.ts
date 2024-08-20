@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from 'express';
 import { UserService } from '../../../services/user.service';
+import { PasswordsMatchValidator } from '../../../shared/validators/password_match_validator';
 
 @Component({
   selector: 'app-register-page',
@@ -23,12 +24,17 @@ export class RegisterPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(5)]],
-      email: ['', [Validators.required], [Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(5)]],
-      confirmPassword: ['', [Validators.required]],
-      address: ['', [Validators.required, Validators.minLength(10)]],
-    });
+    this.registerForm = this.formBuilder.group(
+      {
+        name: ['', [Validators.required, Validators.minLength(5)]],
+        email: ['', [Validators.required], [Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(5)]],
+        confirmPassword: ['', [Validators.required]],
+        address: ['', [Validators.required, Validators.minLength(10)]],
+      },
+      {
+        validators: PasswordsMatchValidator('password', 'confirmPassword'),
+      }
+    );
   }
 }
