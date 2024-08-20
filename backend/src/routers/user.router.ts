@@ -1,10 +1,10 @@
+import bcrypt from 'bcryptjs'
 import Router from 'express'
 import expressAsyncHandler from 'express-async-handler'
 import jwt from 'jsonwebtoken'
+import { HTTP_BAD_REQUEST } from '../constants/http_status'
 import { sample_users } from '../data'
 import { User, UserModel } from '../models/user.model'
-import { HTTP_BAD_REQUEST } from '../constants/http_status'
-import bcrypt from 'bcryptjs'
 
 const router = Router()
 
