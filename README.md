@@ -100,6 +100,8 @@ FRONT END
     5. Connect to MongoDB Atlas
     6. Use MongoDB instead of data.ts in apis
 
+v0.13 Register page (endpoint /register)
+
 BACK END
 
 8. Create and connecting to Backend
