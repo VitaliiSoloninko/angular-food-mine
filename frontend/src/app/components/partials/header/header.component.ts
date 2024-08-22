@@ -11,6 +11,7 @@ import { User } from '../../../shared/models/User';
 export class HeaderComponent implements OnInit {
   cartQuantity = 0;
   user!: User;
+
   constructor(cartService: CartService, private userService: UserService) {
     cartService.getCartObservable().subscribe((newCart) => {
       this.cartQuantity = newCart.totalCount;
