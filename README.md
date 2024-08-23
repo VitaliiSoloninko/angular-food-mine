@@ -1,3 +1,18 @@
+v0.1 Home page: header and food items
+v0.2 Home page: search foods
+v0.3 Home page: tags bar
+v0.4 Food page
+v0.5 Cart page
+v0.6 Not found products
+v0.7 Backend 1 - (Express)
+v0.8 Login page
+v0.9 Logout
+v0.10 Login default component
+v0.11 Connecting to MongoDB
+v0.11 Backend 2 - (MongoDB, mongoose)
+v0.13 Register page (endpoint /register)
+v0.14 Loading! (Interceptor)
+
 FRONT END
 
 1. Header +
@@ -88,6 +103,7 @@ FRONT END
     4. Default Button
 
 11. Connect Login API to MongoDB Atlas BACKEND
+
     1. Moving Apis into routers
     2. Create MongoDB Atlas
     3. Create .env file
@@ -100,22 +116,18 @@ FRONT END
     5. Connect to MongoDB Atlas
     6. Use MongoDB instead of data.ts in apis
 
-v0.13 Register page (endpoint /register)
-
-BACK END
-
-8. Create and connecting to Backend
-   8.1 Create backend folder
-   8.2 npm init
-   8.3 npm install typescript
-   8.4 Create tsconfig.json
-   8.5 Create .gitignore
-   8.6 Copy data.ts to backend/src
-   8.7 npm install express cors
-   8.8 Create server.ts
-   8.8.1 install @types
-   8.8.2 Add Api
-   8.9 npm install nodemon ts-node --save-dev
-   8.10 Add urs.ts to frontend
-   8.11 Add HttpClient module
-   8.12 Update food service
+12. Create and connecting to Backend
+    8.1 Create backend folder
+    8.2 npm init
+    8.3 npm install typescript
+    8.4 Create tsconfig.json
+    8.5 Create .gitignore
+    8.6 Copy data.ts to backend/src
+    8.7 npm install express cors
+    8.8 Create server.ts
+    8.8.1 install @types
+    8.8.2 Add Api
+    8.9 npm install nodemon ts-node --save-dev
+    8.10 Add urs.ts to frontend
+    8.11 Add HttpClient module
+    8.12 Update food service
