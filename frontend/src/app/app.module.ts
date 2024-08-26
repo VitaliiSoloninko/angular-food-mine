@@ -22,6 +22,7 @@ import { TagsComponent } from './components/partials/tags/tags.component';
 import { TextInputComponent } from './components/partials/text-input/text-input.component';
 import { TitleComponent } from './components/partials/title/title.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     DefaultButtonComponent,
     RegisterPageComponent,
     LoadingComponent,
+    CheckoutPageComponent,
   ],
   imports: [
     BrowserModule,
