@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
-dotenv.config()
 import path from 'path'
+dotenv.config()
 
 import cors from 'cors'
 import express from 'express'
@@ -27,10 +27,10 @@ app.use('/api/users', userRouter)
 
 app.use(express.static('public'))
 app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'public', 'index.html'))
+	res.sendFile(path.join(__dirname, 'public', 'browser', 'index.html'))
 })
 
 const port = process.env.PORT || 5000
 app.listen(port, () => {
-	console.log('Website served on http://localhost: ' + port)
+	console.log('Website served on http://localhost:' + port)
 })
