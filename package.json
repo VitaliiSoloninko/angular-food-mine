@@ -1,6 +1,9 @@
 {
 	"name": "food-mine",
 	"version": "1.0.0",
+	"engines": {
+		"node": ">=18 <20"
+	},
 	"scripts": {
 		"dev": "cd backend && npm start & cd frontend && npm start",
 		"start": "cd backend/build && node server.js",
