@@ -4,6 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
   selector: 'app-title',
   templateUrl: './title.component.html',
   styleUrl: './title.component.css',
+  standalone: false,
 })
 export class TitleComponent implements OnInit {
   @Input()

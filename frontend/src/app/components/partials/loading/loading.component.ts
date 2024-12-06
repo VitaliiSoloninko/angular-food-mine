@@ -5,6 +5,7 @@ import { LoadingService } from '../../../services/loading.service';
   selector: 'app-loading',
   templateUrl: './loading.component.html',
   styleUrl: './loading.component.css',
+  standalone: false,
 })
 export class LoadingComponent {
   isLoading!: boolean;

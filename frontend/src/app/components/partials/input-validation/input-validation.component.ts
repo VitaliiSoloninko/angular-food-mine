@@ -18,6 +18,7 @@ const VALIDATORS_MESSAGES: any = {
   selector: 'input-validation',
   templateUrl: './input-validation.component.html',
   styleUrl: './input-validation.component.css',
+  standalone: false,
 })
 export class InputValidationComponent implements OnInit, OnChanges {
   @Input()

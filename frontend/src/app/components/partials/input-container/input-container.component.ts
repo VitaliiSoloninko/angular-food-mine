@@ -4,6 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'input-container',
   templateUrl: './input-container.component.html',
   styleUrl: './input-container.component.css',
+  standalone: false,
 })
 export class InputContainerComponent {
   @Input()

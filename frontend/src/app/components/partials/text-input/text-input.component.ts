@@ -5,6 +5,7 @@ import { AbstractControl, FormControl } from '@angular/forms';
   selector: 'text-input',
   templateUrl: './text-input.component.html',
   styleUrl: './text-input.component.css',
+  standalone: false,
 })
 export class TextInputComponent {
   @Input()

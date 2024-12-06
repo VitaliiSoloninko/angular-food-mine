@@ -7,6 +7,7 @@ import { UserService } from '../../../services/user.service';
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css',
+  standalone: false,
 })
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup;

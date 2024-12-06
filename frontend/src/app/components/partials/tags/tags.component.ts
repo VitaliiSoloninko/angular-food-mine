@@ -6,6 +6,7 @@ import { Tag } from '../../../shared/models/Tag';
   selector: 'app-tags',
   templateUrl: './tags.component.html',
   styleUrl: './tags.component.css',
+  standalone: false,
 })
 export class TagsComponent implements OnInit {
   tags?: Tag[];

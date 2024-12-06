@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrl: './search.component.css',
+  standalone: false,
 })
 export class SearchComponent implements OnInit {
   searchTerm = '';

@@ -7,6 +7,7 @@ import { CartItem } from '../../../shared/models/CartItem';
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',
   styleUrl: './cart-page.component.css',
+  standalone: false,
 })
 export class CartPageComponent implements OnInit {
   cart!: Cart;

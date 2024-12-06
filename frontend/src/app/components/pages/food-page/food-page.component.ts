@@ -8,6 +8,7 @@ import { Food } from '../../../shared/models/Food';
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
   styleUrl: './food-page.component.css',
+  standalone: false,
 })
 export class FoodPageComponent implements OnInit {
   food!: Food;

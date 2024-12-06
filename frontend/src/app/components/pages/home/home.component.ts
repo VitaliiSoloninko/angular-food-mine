@@ -8,6 +8,7 @@ import { Food } from '../../../shared/models/Food';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  standalone: false,
 })
 export class HomeComponent implements OnInit {
   foods: Food[] = [];

@@ -9,6 +9,7 @@ import { Order } from '../../../shared/models/Order';
   selector: 'app-checkout-page',
   templateUrl: './checkout-page.component.html',
   styleUrl: './checkout-page.component.css',
+  standalone: false,
 })
 export class CheckoutPageComponent {
   order: Order = new Order();

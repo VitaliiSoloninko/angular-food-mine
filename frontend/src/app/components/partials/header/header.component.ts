@@ -7,6 +7,7 @@ import { User } from '../../../shared/models/User';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
+  standalone: false,
 })
 export class HeaderComponent implements OnInit {
   cartQuantity = 0;
