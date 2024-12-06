@@ -23,6 +23,7 @@ import { TextInputComponent } from './components/partials/text-input/text-input.
 import { TitleComponent } from './components/partials/title/title.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
     RegisterPageComponent,
     LoadingComponent,
     CheckoutPageComponent,
+    StarRatingComponent,
   ],
   imports: [
     BrowserModule,
