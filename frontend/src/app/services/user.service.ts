@@ -4,9 +4,8 @@ import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/urls';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
-import { User } from '../shared/models/User';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
-import { error } from 'console';
+import { User } from '../shared/models/User';
 
 const USER_KEY = 'User';
 @Injectable({
@@ -19,6 +18,10 @@ export class UserService {
   public userObservable: Observable<User>;
   constructor(private http: HttpClient, private toastrService: ToastrService) {
     this.userObservable = this.userSubject.asObservable();
+  }
+
+  public get currentUser(): User {
+    return this.userSubject.value;
   }
 
   login(userLogin: IUserLogin): Observable<User> {

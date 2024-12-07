@@ -10,7 +10,7 @@ v0.9 Logout
 v0.10 Login default component
 v0.11 Connecting to MongoDB
 v0.11 Backend 2 - (MongoDB, mongoose)
-v0.13 Register page (endpoint /register)
+v0.13 Register page (endpoint /register) (vitali@gmail.com 12345)
 v0.14 Loading! (Interceptor)
 
 FRONT END
