@@ -1,4 +1,5 @@
 import { Schema } from 'mongoose'
+import { OrderStatus } from '../constants/order_status'
 import { Food, FoodSchema } from './food.model'
 
 export interface LatLng {
@@ -31,5 +32,5 @@ export interface Order {
 	address: string
 	paymentID: string
 	createdAt: string
-	status: string
+	status: OrderStatus
 }
