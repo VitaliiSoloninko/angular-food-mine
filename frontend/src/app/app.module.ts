@@ -26,6 +26,7 @@ import { TextInputComponent } from './components/partials/text-input/text-input.
 import { TitleComponent } from './components/partials/title/title.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { OrderItemsComponent } from './components/partials/order-items/order-items.component';
+import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { OrderItemsComponent } from './components/partials/order-items/order-ite
     }),
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
