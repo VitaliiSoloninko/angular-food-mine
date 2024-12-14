@@ -7,6 +7,7 @@ import express from 'express'
 import { dbConnect } from './configs/database.config'
 import foodRouter from './routers/food.router'
 import userRouter from './routers/user.router'
+import orderRouter from './routers/order.router'
 dbConnect()
 
 // cors for redirect localhost server
@@ -24,6 +25,7 @@ app.use(
 
 app.use('/api/foods', foodRouter)
 app.use('/api/users', userRouter)
+app.use('/api/orders', orderRouter)
 
 app.use(express.static('public'))
 app.get('*', (req, res) => {
