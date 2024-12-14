@@ -131,3 +131,6 @@ FRONT END
     8.10 Add urs.ts to frontend
     8.11 Add HttpClient module
     8.12 Update food service
+
+login vitali@gmail.com
+password 12345
