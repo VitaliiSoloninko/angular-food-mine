@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
 }
 
 .content {
@@ -28,6 +29,11 @@ form {
 .buttons {
   margin: 2rem;
   width: 35rem;
+}
+@media (max-width: 991px) {
+  .buttons {
+    width: 100%;
+  }
 }
 
 button {
