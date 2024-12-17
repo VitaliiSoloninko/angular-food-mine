@@ -27,6 +27,7 @@ import { TitleComponent } from './components/partials/title/title.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { OrderItemsComponent } from './components/partials/order-items/order-items.component';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
+import { MapComponent } from './components/partials/map/map.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
     StarRatingComponent,
     OrderItemsListComponent,
     OrderItemsComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
