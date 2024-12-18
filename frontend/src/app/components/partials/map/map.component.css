@@ -16,3 +16,24 @@
   width: 100%;
   height: 100%;
 }
+
+.find-location {
+  position: absolute;
+  margin: auto;
+  width: 15rem;
+  min-height: 2.6rem;
+  font-size: 1.2rem;
+  z-index: 1000;
+  top: 0.6rem;
+  left: 0;
+  right: 0;
+  background-color: #ffffff7c;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.find-location:hover {
+  background-color: #fff;
+}

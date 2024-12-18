@@ -28,4 +28,6 @@ export class MapComponent {
 
     tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(this.map);
   }
+
+  findMyLocation() {}
 }
