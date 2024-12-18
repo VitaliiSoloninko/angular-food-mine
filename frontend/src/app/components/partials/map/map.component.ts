@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { LatLngTuple, map, Map, tileLayer } from 'leaflet';
+import { LocationService } from '../../../services/location.service';
 
 @Component({
   selector: 'app-map',
@@ -15,6 +16,8 @@ export class MapComponent {
   mapRef!: ElementRef;
   map!: Map;
 
+  constructor(private locationService: LocationService) {}
+
   ngOnInit(): void {
     this.initializeMap();
   }
@@ -29,5 +32,11 @@ export class MapComponent {
     tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(this.map);
   }
 
-  findMyLocation() {}
+  findMyLocation() {
+    this.locationService.getCurrentLocation().subscribe({
+      next: (latLng) => {
+        console.log(latLng);
+      },
+    });
+  }
 }
