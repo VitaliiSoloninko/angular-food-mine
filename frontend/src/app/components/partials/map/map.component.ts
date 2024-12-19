@@ -1,6 +1,7 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import {
   icon,
+  LatLng,
   LatLngExpression,
   LatLngTuple,
   LeafletMouseEvent,
@@ -11,6 +12,7 @@ import {
   tileLayer,
 } from 'leaflet';
 import { LocationService } from '../../../services/location.service';
+import { Order } from '../../../shared/models/Order';
 
 @Component({
   selector: 'app-map',
@@ -20,6 +22,9 @@ import { LocationService } from '../../../services/location.service';
   styleUrl: './map.component.css',
 })
 export class MapComponent {
+  @Input()
+  order!: Order;
+
   private readonly MARKER_ZOOM_LEVEL = 16;
   private readonly MARKER_ICON = icon({
     iconUrl: '/assets/map-marker.svg',
@@ -63,6 +68,7 @@ export class MapComponent {
   }
 
   setMarker(latLng: LatLngExpression) {
+    this.addressLatLng = latLng as LatLng;
     if (this.currentMarker) {
       this.currentMarker.setLatLng(latLng);
       return;
@@ -72,5 +78,17 @@ export class MapComponent {
       draggable: true,
       icon: this.MARKER_ICON,
     }).addTo(this.map);
+
+    this.currentMarker.on('dragend', () => {
+      this.addressLatLng = this.currentMarker.getLatLng();
+    });
+  }
+
+  // convert latitude and altitude values ​​for mongoDB
+  set addressLatLng(latLng: LatLng) {
+    latLng.lat = parseFloat(latLng.lat.toFixed(8));
+    latLng.lng = parseFloat(latLng.lng.toFixed(8));
+    this.order.addressLatLng = latLng;
+    console.log(this.order.addressLatLng);
   }
 }
