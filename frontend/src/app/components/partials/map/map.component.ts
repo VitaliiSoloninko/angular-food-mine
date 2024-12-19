@@ -3,6 +3,7 @@ import {
   icon,
   LatLngExpression,
   LatLngTuple,
+  LeafletMouseEvent,
   map,
   Map,
   marker,
@@ -46,6 +47,10 @@ export class MapComponent {
     }).setView(this.DEFAULT_LATLNG, 1);
 
     tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(this.map);
+
+    this.map.on('click', (e: LeafletMouseEvent) => {
+      this.setMarker(e.latlng);
+    });
   }
 
   findMyLocation() {
