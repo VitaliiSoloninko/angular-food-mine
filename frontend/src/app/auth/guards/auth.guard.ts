@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
-  GuardResult,
-  MaybeAsync,
   Router,
   RouterStateSnapshot,
+  UrlTree,
 } from '@angular/router';
+import { Observable } from 'rxjs';
 import { UserService } from '../../services/user.service';
 
 @Injectable({
@@ -17,8 +17,14 @@ export class AuthGuard implements CanActivate {
 
   canActivate(
     route: ActivatedRouteSnapshot,
+    //   state: RouterStateSnapshot
+    // ): MaybeAsync<GuardResult>
     state: RouterStateSnapshot
-  ): MaybeAsync<GuardResult> {
+  ):
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree>
+    | boolean
+    | UrlTree {
     if (this.userService.currentUser.token) return true;
 
     this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });

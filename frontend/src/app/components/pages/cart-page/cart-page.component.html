@@ -5,8 +5,8 @@
   resetLinkText="Go To Homepage"
 ></app-not-found>
 <div *ngIf="cart && cart.items.length" class="container">
-  <ul>
-    <li *ngFor="let cartItem of cart.items">
+  <ul class="product-list">
+    <li class="cart-item" *ngFor="let cartItem of cart.items">
       <div>
         <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
       </div>

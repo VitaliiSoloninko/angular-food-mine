@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './auth/guards/auth.guard';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
@@ -19,9 +18,9 @@ const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutPageComponent,
-    canActivate: [AuthGuard],
   },
 ];
+// canActivate: [AuthGuard]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
