@@ -12,6 +12,12 @@
   flex-direction: column;
 }
 
+@media (max-width: 991px) {
+  .map {
+    width: 100%;
+  }
+}
+
 .item {
   display: flex;
 }
