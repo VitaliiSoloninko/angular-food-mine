@@ -47,8 +47,11 @@ export class CheckoutPageComponent {
       return;
     }
 
-    if (!this.order.address) {
-      this.toastrService.warning('Please select your location', 'Location');
+    if (!this.order.addressLatLng) {
+      this.toastrService.warning(
+        'Please select your location on the map',
+        'Location'
+      );
       return;
     }
 

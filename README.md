@@ -1,3 +1,6 @@
+login admin@gmail.com
+password admin
+
 v0.1 Home page: header and food items
 v0.2 Home page: search foods
 v0.3 Home page: tags bar
@@ -132,5 +135,5 @@ FRONT END
     8.11 Add HttpClient module
     8.12 Update food service
 
-login vitali@gmail.com
-password 12345
+login admin@gmail.com
+password admin

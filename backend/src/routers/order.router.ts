@@ -2,8 +2,8 @@ import { Router } from 'express'
 import expressAsyncHandler from 'express-async-handler'
 import { HTTP_BAD_REQUEST } from '../constants/http_status'
 import { OrderStatus } from '../constants/order_status'
-import { OrderModel } from '../models/order.model'
 import auth from '../middlewares/auth.middleware'
+import { OrderModel } from '../models/order.model'
 
 const router = Router()
 router.use(auth)
@@ -15,6 +15,7 @@ router.post(
 
 		if (requestOrder.items.length <= 0) {
 			res.status(HTTP_BAD_REQUEST).send('Cart is empty!')
+			return
 		}
 
 		await OrderModel.deleteOne({
