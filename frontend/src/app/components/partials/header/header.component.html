@@ -9,8 +9,7 @@
         <li *ngIf="user.name" class="menu-container">
           <a routerLink="/dashboard">{{ user.name }}</a>
           <div class="menu">
-            <a routerLink="/profile">Profile</a>
-            <a routerLink="/orders">Orders</a>
+            <a routerLink="/checkout">Checkout</a>
             <a (click)="logout()">Logout</a>
           </div>
         </li>
