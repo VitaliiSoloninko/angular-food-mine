@@ -20,3 +20,4 @@ export const ORDERS_URL = BASE_URL + '/api/orders';
 export const ORDER_CREATE_URL = BASE_URL + '/api/orders/create';
 export const ORDER_NEW_FOR_CURRENT_USER_URL =
   BASE_URL + '/api/orders/newOrderForCurrentUser';
+export const ORDER_PAY_URL = BASE_URL + '/api/orders/pay';
