@@ -1,6 +1,10 @@
 login admin@gmail.com
 password admin
 
+[Paypal sandbox](https://sandbox.paypal.com)
+sb-gcydi35549716@personal.example.com
+rysk/|U6
+
 v0.1 Home page: header and food items
 v0.2 Home page: search foods
 v0.3 Home page: tags bar
