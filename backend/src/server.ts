@@ -27,7 +27,7 @@ app.use('/api/foods', foodRouter)
 app.use('/api/users', userRouter)
 app.use('/api/orders', orderRouter)
 
-app.use(express.static('public/browser'))
+app.use(express.static(path.join('public', 'browser')))
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, 'public', 'browser', 'index.html'))
 })
