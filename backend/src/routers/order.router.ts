@@ -39,7 +39,7 @@ router.get(
 )
 
 router.post(
-	'pay',
+	'/pay',
 	expressAsyncHandler(async (req: any, res) => {
 		const { paymentId } = req.body
 		const order = await getNewOrderOfCurrentUser(req)
@@ -56,7 +56,7 @@ router.post(
 )
 
 router.get(
-	'track/:id',
+	'/track/:id',
 	expressAsyncHandler(async (req: any, res) => {
 		const order = await OrderModel.findById(req.params.id)
 		res.send(order)

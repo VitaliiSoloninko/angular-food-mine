@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Order } from '../../../shared/models/Order';
 import { ActivatedRoute } from '@angular/router';
 import { OrderService } from '../../../services/order.service';
+import { Order } from '../../../shared/models/Order';
 
 @Component({
   selector: 'app-order-track-page',
@@ -12,7 +12,6 @@ import { OrderService } from '../../../services/order.service';
 })
 export class OrderTrackPageComponent {
   order!: Order;
-
   constructor(activatedRoute: ActivatedRoute, orderService: OrderService) {
     const params = activatedRoute.snapshot.params;
     if (!params.orderId) return;
