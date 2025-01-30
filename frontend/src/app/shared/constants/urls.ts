@@ -1,8 +1,11 @@
-import { environment } from '../../environments/environment';
+const BASE_URL = 'https://expressjs-delicious-food-production.up.railway.app';
 
-const BASE_URL = environment.production ? '' : 'http://localhost:5000';
+// const BASE_URL = environment.production
+// //   ? 'https://angular-food-cafe-47fx.onrender.com'
+//   : 'https://angular-food-cafe-47fx.onrender.com';
 
 // https://angular-food-cafe-47fx.onrender.com
+// http://localhost:5000
 
 // Foods, Tags, Search
 export const FOODS_URL = BASE_URL + '/api/foods';
